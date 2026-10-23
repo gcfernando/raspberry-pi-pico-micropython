@@ -7,6 +7,21 @@ permalink: /documentation/
 
 Browse the published guides, examples and reference pages for **MicroPython & Pico Examples**. Each guide has a readable web page; the Markdown sources remain available on GitHub.
 
+## 🔎 Example index
+
+| Resource | Purpose |
+|---|---|
+| [Repository overview](README.md) | Requirements, quick start, limitations and license |
+| [Onboard LED guide](PiPico2W/FirstLed/readme.md) | Program explanation, transfer/run procedure and expected timing |
+| [main.py](PiPico2W/FirstLed/main.py) | The complete MicroPython program |
+| [MIT license](LICENSE) | Repository license terms |
+
+## 🧪 Hardware verification reference
+
+Use a Pico 2 W with matching MicroPython firmware. Check that the LED changes state approximately once per second and that execution can be interrupted from the REPL. The board is not connected or tested by this documentation review.
+
+Desktop Python is unsuitable for this sample's machine module. The generated page/source navigation below is retained for the documentation site.
+
 ## Read online
 
 <table>
