@@ -34,7 +34,7 @@ Run the script interactively while experimenting. Saving it as `main.py` on the 
 
 ## 🏗️ Architecture
 
-`PiPico2W/FirstLed` contains the program, guide and MicroPico project marker. `_config.yml`, `_layouts` and `assets` support the documentation site.
+`PiPico2W/FirstLed` contains the program, guide and [MicroPico project marker](PiPico2W/FirstLed/.micropico). The marker only identifies the local project folder; it does not install firmware, select a serial port or transfer the script. `main.py` must be run on, or copied to, the board separately. `_config.yml`, `_layouts` and `assets` support the documentation site.
 
 ## 🧪 Development and testing
 

@@ -29,7 +29,7 @@ while True:
 
 ## 💡 How it works
 
-1. `Pin("LED", Pin.OUT)` selects the board's named onboard LED and configures it as an output.
+1. `Pin("LED", Pin.OUT)` selects the board's named onboard LED and configures it as an output. The program does not explicitly set an initial high/low value before the first toggle.
 2. `led.toggle()` changes the current LED state.
 3. `sleep(1)` waits one second before the next state change.
 4. The `while True` loop repeats until execution is stopped.
