@@ -62,6 +62,8 @@ See the [official RP2 quick reference](https://docs.micropython.org/en/latest/rp
 
 ---
 
+<a id="documentation-links"></a>
+
 ## 🔗 Related documentation
 
 [Repository overview and license](../../README.md) · [Documentation index](../../documentation.md)

@@ -1,3 +1,5 @@
+<a id="micropython-led-blink-example-for-raspberry-pi-pico-2-w"></a>
+
 # Raspberry Pi Pico 2 W — MicroPython LED Blink
 
 Learn GPIO output and timing with a short MicroPython program that toggles the Pico 2 W onboard LED once per second.
@@ -5,6 +7,8 @@ Learn GPIO output and timing with a short MicroPython program that toggles the P
 ## 🔎 Overview
 
 This repository contains one introductory board example. It uses `machine.Pin` and `time.sleep`; it does not configure Wi-Fi or require an external service.
+
+<a id="what-is-included"></a>
 
 ## ✨ Features
 
@@ -15,6 +19,8 @@ This repository contains one introductory board example. It uses `machine.Pin` a
 ## 🚀 Quick start
 
 Connect a Raspberry Pi Pico 2 W running matching MicroPython firmware, open it with a compatible MicroPython editor or REPL, then transfer and run [the example](PiPico2W/FirstLed/main.py). Follow the [step-by-step guide](PiPico2W/FirstLed/readme.md) for the program and expected behavior.
+
+<a id="run-requirements"></a>
 
 ## 📦 Prerequisites and installation
 
@@ -47,6 +53,8 @@ For another board example, state the exact board, firmware, wiring and expected 
 ## 🔒 Security
 
 Do not include wireless credentials or other secrets in examples or reports. Use a private reporting option if available for sensitive issues; no dedicated security policy is committed.
+
+<a id="documentation-links"></a>
 
 ## 📄 Support and license
 
