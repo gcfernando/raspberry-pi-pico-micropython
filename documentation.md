@@ -13,8 +13,8 @@ Browse the published guides, examples and reference pages for **MicroPython & Pi
 |---|---|
 | [Repository overview](README.md) | Requirements, quick start, limitations and license |
 | [Onboard LED guide](PiPico2W/FirstLed/readme.md) | Program explanation, transfer/run procedure and expected timing |
-| [main.py](PiPico2W/FirstLed/main.py) | The complete MicroPython program |
-| [MIT license](LICENSE) | Repository license terms |
+| [main.py](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py) | The complete MicroPython program |
+| [MIT license](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/LICENSE) | Repository license terms |
 
 ## 🧪 Hardware verification reference
 
@@ -48,4 +48,4 @@ Desktop Python is unsuitable for this sample's machine module. The generated pag
 
 ## Explore more
 
-[All developer projects](https://gcfernando.github.io/gcfernando/projects/) · [Repository on GitHub](https://github.com/gcfernando/microcontoller) · [XML sitemap](https://gcfernando.github.io/microcontoller/sitemap.xml)
+[All developer projects](https://gcfernando.github.io/gcfernando/projects/) · [Repository on GitHub](https://github.com/gcfernando/raspberry-pi-pico-micropython) · [XML sitemap](https://gcfernando.github.io/raspberry-pi-pico-micropython/sitemap.xml)

@@ -2,6 +2,8 @@
 
 # Raspberry Pi Pico 2 W — MicroPython LED Blink
 
+**Read online:** [Documentation website](https://gcfernando.github.io/raspberry-pi-pico-micropython/) · [All guides](documentation.md)
+
 Learn GPIO output and timing with a short MicroPython program that toggles the Pico 2 W onboard LED once per second.
 
 ## 🔎 Overview
@@ -14,11 +16,11 @@ This repository contains one introductory board example. It uses `machine.Pin` a
 
 - Selects the onboard LED with the board alias `Pin("LED", Pin.OUT)`.
 - Toggles the LED state every second, for an approximately two-second on/off cycle.
-- Keeps the complete program in [main.py](PiPico2W/FirstLed/main.py).
+- Keeps the complete program in [main.py](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py).
 
 ## 🚀 Quick start
 
-Connect a Raspberry Pi Pico 2 W running matching MicroPython firmware, open it with a compatible MicroPython editor or REPL, then transfer and run [the example](PiPico2W/FirstLed/main.py). Follow the [step-by-step guide](PiPico2W/FirstLed/readme.md) for the program and expected behavior.
+Connect a Raspberry Pi Pico 2 W running matching MicroPython firmware, open it with a compatible MicroPython editor or REPL, then transfer and run [the example](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py). Follow the [step-by-step guide](PiPico2W/FirstLed/readme.md) for the program and expected behavior.
 
 <a id="run-requirements"></a>
 
@@ -34,7 +36,7 @@ Run the script interactively while experimenting. Saving it as `main.py` on the 
 
 ## 🏗️ Architecture
 
-`PiPico2W/FirstLed` contains the program, guide and [MicroPico project marker](PiPico2W/FirstLed/.micropico). The marker only identifies the local project folder; it does not install firmware, select a serial port or transfer the script. `main.py` must be run on, or copied to, the board separately. `_config.yml`, `_layouts` and `assets` support the documentation site.
+`PiPico2W/FirstLed` contains the program, guide and [MicroPico project marker](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/.micropico). The marker only identifies the local project folder; it does not install firmware, select a serial port or transfer the script. `main.py` must be run on, or copied to, the board separately. `_config.yml`, `_layouts` and `assets` support the documentation site.
 
 ## 🧪 Development and testing
 
@@ -58,6 +60,6 @@ Do not include wireless credentials or other secrets in examples or reports. Use
 
 ## 📄 Support and license
 
-Report reproducible example issues in [repository issues](https://github.com/gcfernando/microcontoller/issues). The repository includes an [MIT license](LICENSE).
+Report reproducible example issues in [repository issues](https://github.com/gcfernando/raspberry-pi-pico-micropython/issues). The repository includes an [MIT license](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/LICENSE).
 
 [Documentation index](documentation.md)

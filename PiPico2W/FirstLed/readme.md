@@ -12,7 +12,7 @@ For firmware setup, follow the [official RP2 getting-started guide](https://docs
 
 ## 💡 Program
 
-The following matches [main.py](main.py):
+The following matches [main.py](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py):
 
 ```python
 from machine import Pin
@@ -40,7 +40,7 @@ The LED changes state once per second; a complete on/off cycle takes about two s
 
 ## 🚀 Run it on the board
 
-Install the matching MicroPython firmware for your Pico 2 W, connect through a compatible editor or MicroPython REPL, and run the [source program](main.py). Saving it as `main.py` on the board lets MicroPython run it at startup.
+Install the matching MicroPython firmware for your Pico 2 W, connect through a compatible editor or MicroPython REPL, and run the [source program](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py). Saving it as `main.py` on the board lets MicroPython run it at startup.
 
 Interrupt execution from the REPL before editing or replacing a continuously running startup script.
 

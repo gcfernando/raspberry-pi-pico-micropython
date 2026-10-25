@@ -1,5 +1,5 @@
 url: "https://gcfernando.github.io"
-baseurl: "/microcontoller"
+baseurl: "/raspberry-pi-pico-micropython"
 title: "MicroPython & Pico Examples"
 description: "A Raspberry Pi Pico 2 W MicroPython LED example, with source code and an explanation of GPIO and timing."
 lang: en
@@ -13,7 +13,7 @@ exclude:
   - node_modules
 
 # Public documentation navigation and presentation.
-repository: gcfernando/microcontoller
+repository: gcfernando/raspberry-pi-pico-micropython
 theme: jekyll-theme-primer
 projects_hub: https://gcfernando.github.io/gcfernando/projects/
 project_category: "Hardware & learning"
