@@ -1,6 +1,14 @@
-# Blink the Pico 2 W Onboard LED with MicroPython
+[MicroPython examples](../../README.md) · **MicroPython and GPIO**
+
+<a id="blink-the-pico-2-w-onboard-led-with-micropython"></a>
+
+# Blink the Pico 2 W LED with MicroPython
 
 Configure the board's named LED pin as an output and toggle it once per second. This example introduces GPIO output and blocking delays with a continuous loop.
+
+> **In this guide:** [Get started](#guide-prerequisites-and-installation) · [Walk through the example](#guide-program) · [Check the limits](#guide-verification)
+
+<a id="guide-prerequisites-and-installation"></a>
 
 ## 📦 Prerequisites and installation
 
@@ -9,6 +17,8 @@ Use a Raspberry Pi Pico 2 W with matching MicroPython firmware, a USB data cable
 For firmware setup, follow the [official RP2 getting-started guide](https://docs.micropython.org/en/latest/rp2/tutorial/intro.html). No external wiring or network connection is used by this program.
 
 <a id="program"></a>
+
+<a id="guide-program"></a>
 
 ## 💡 Program
 
@@ -43,6 +53,8 @@ The LED changes state once per second; a complete on/off cycle takes about two s
 Install the matching MicroPython firmware for your Pico 2 W, connect through a compatible editor or MicroPython REPL, and run the [source program](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py). Saving it as `main.py` on the board lets MicroPython run it at startup.
 
 Interrupt execution from the REPL before editing or replacing a continuously running startup script.
+
+<a id="guide-verification"></a>
 
 ## 🧪 Verification
 

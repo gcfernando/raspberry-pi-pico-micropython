@@ -1,6 +1,18 @@
 <a id="micropython-led-blink-example-for-raspberry-pi-pico-2-w"></a>
 
-# Raspberry Pi Pico 2 W — MicroPython LED Blink
+<a id="raspberry-pi-pico-2-w--micropython-led-blink"></a>
+
+<div align="center" markdown="1">
+
+# Raspberry Pi Pico 2 W — MicroPython LED Example
+
+<p align="center"><strong>Start with one LED. Learn the board, GPIO and timing.</strong></p>
+
+[![Repository standards](https://github.com/gcfernando/raspberry-pi-pico-micropython/actions/workflows/repository-standards.yml/badge.svg)](https://github.com/gcfernando/raspberry-pi-pico-micropython/actions/workflows/repository-standards.yml) [![Read the documentation](https://img.shields.io/badge/Read-the_documentation-2563eb?style=flat-square)](https://gcfernando.github.io/raspberry-pi-pico-micropython/)
+
+</div>
+
+> **Start here:** [Start on the board](#guide-quick-start) · [Check prerequisites](#guide-prerequisites-and-installation) · [Understand the loop](#guide-usage) · [Resolve common issues](#guide-troubleshooting-and-limitations)
 
 **Read online:** [Documentation website](https://gcfernando.github.io/raspberry-pi-pico-micropython/) · [All guides](documentation.md)
 
@@ -18,17 +30,23 @@ This repository contains one introductory board example. It uses `machine.Pin` a
 - Toggles the LED state every second, for an approximately two-second on/off cycle.
 - Keeps the complete program in [main.py](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py).
 
+<a id="guide-quick-start"></a>
+
 ## 🚀 Quick start
 
 Connect a Raspberry Pi Pico 2 W running matching MicroPython firmware, open it with a compatible MicroPython editor or REPL, then transfer and run [the example](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py). Follow the [step-by-step guide](PiPico2W/FirstLed/readme.md) for the program and expected behavior.
 
 <a id="run-requirements"></a>
 
+<a id="guide-prerequisites-and-installation"></a>
+
 ## 📦 Prerequisites and installation
 
 You need the board, a USB data cable, matching MicroPython firmware and a tool that can access the board's filesystem and REPL. The `machine` module runs on MicroPython; ordinary desktop Python cannot execute this program as written.
 
 See the [official RP2 firmware setup guide](https://docs.micropython.org/en/latest/rp2/tutorial/intro.html). This repository does not supply firmware or a desktop dependency installer.
+
+<a id="guide-usage"></a>
 
 ## 💡 Usage
 
@@ -41,6 +59,8 @@ Run the script interactively while experimenting. Saving it as `main.py` on the 
 ## 🧪 Development and testing
 
 There are no application tests or build scripts; the Repository standards workflow checks metadata separately. Confirm on the board that the LED changes state approximately once per second and that you can interrupt the loop. This documentation review compared the guide's code block with `main.py`; no physical board was available for execution.
+
+<a id="guide-troubleshooting-and-limitations"></a>
 
 ## 🛠️ Troubleshooting and limitations
 
