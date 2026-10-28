@@ -40,7 +40,7 @@ Run the script interactively while experimenting. Saving it as `main.py` on the 
 
 ## 🧪 Development and testing
 
-There are no automated tests or build scripts. Confirm on the board that the LED changes state approximately once per second and that you can interrupt the loop. This documentation review compared the guide's code block with `main.py`; no physical board was available for execution.
+There are no application tests or build scripts; the Repository standards workflow checks metadata separately. Confirm on the board that the LED changes state approximately once per second and that you can interrupt the loop. This documentation review compared the guide's code block with `main.py`; no physical board was available for execution.
 
 ## 🛠️ Troubleshooting and limitations
 
@@ -54,7 +54,7 @@ For another board example, state the exact board, firmware, wiring and expected 
 
 ## 🔒 Security
 
-Do not include wireless credentials or other secrets in examples or reports. Use a private reporting option if available for sensitive issues; no dedicated security policy is committed.
+Do not include wireless credentials or other secrets in examples or reports. Use the [security policy](SECURITY.md) for private reporting of sensitive issues.
 
 <a id="documentation-links"></a>
 
@@ -63,3 +63,7 @@ Do not include wireless credentials or other secrets in examples or reports. Use
 Report reproducible example issues in [repository issues](https://github.com/gcfernando/raspberry-pi-pico-micropython/issues). The repository includes an [MIT license](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/LICENSE).
 
 [Documentation index](documentation.md)
+
+## Repository maintenance
+
+[Contributing](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/CONTRIBUTING.md) · [Security policy](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/SECURITY.md) · [Repository standards](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/REPOSITORY_STANDARDS.md)

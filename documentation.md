@@ -5,6 +5,8 @@ description: "Browse the Raspberry Pi Pico 2 W MicroPython example and its GPIO,
 permalink: /documentation/
 ---
 
+# Documentation
+
 Browse the published guides, examples and reference pages for **MicroPython & Pico Examples**. Each guide has a readable web page; the Markdown sources remain available on GitHub.
 
 ## 🔎 Example index
