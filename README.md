@@ -1,89 +1,77 @@
-<a id="micropython-led-blink-example-for-raspberry-pi-pico-2-w"></a>
+# Raspberry Pi Pico 2 W LED example
 
-<a id="raspberry-pi-pico-2-w--micropython-led-blink"></a>
-
-<div align="center" markdown="1">
-
-# Raspberry Pi Pico 2 W — MicroPython LED Example
-
-<p align="center"><strong>Start with one LED. Learn the board, GPIO and timing.</strong></p>
+Learn MicroPython GPIO output and timing by toggling the Pico 2 W onboard LED once per second.
 
 [![Repository standards](https://github.com/gcfernando/raspberry-pi-pico-micropython/actions/workflows/repository-standards.yml/badge.svg)](https://github.com/gcfernando/raspberry-pi-pico-micropython/actions/workflows/repository-standards.yml) [![Read the documentation](https://img.shields.io/badge/Read-the_documentation-2563eb?style=flat-square)](https://gcfernando.github.io/raspberry-pi-pico-micropython/)
 
-</div>
+This is one introductory board example for learners starting with `machine.Pin` and `time.sleep`. It uses the named onboard LED and needs no external wiring, Wi-Fi setup or service.
 
-> **Start here:** [Start on the board](#guide-quick-start) · [Check prerequisites](#guide-prerequisites-and-installation) · [Understand the loop](#guide-usage) · [Resolve common issues](#guide-troubleshooting-and-limitations)
+## Quick start
 
-**Read online:** [Documentation website](https://gcfernando.github.io/raspberry-pi-pico-micropython/) · [All guides](documentation.md)
+1. Connect a Raspberry Pi Pico 2 W using a USB data cable.
+2. Install MicroPython firmware matching the board, following the [official RP2 setup guide](https://docs.micropython.org/en/latest/rp2/tutorial/intro.html).
+3. Open the board in a compatible MicroPython editor or REPL tool.
+4. Transfer and run [PiPico2W/FirstLed/main.py](PiPico2W/FirstLed/main.py). The LED should change state approximately once per second.
 
-Learn GPIO output and timing with a short MicroPython program that toggles the Pico 2 W onboard LED once per second.
+The [step-by-step program guide](PiPico2W/FirstLed/readme.md) explains each line. The `machine` module belongs to MicroPython on the board; ordinary desktop Python cannot execute the program as written.
 
-## 🔎 Overview
+## Requirements and usage
 
-This repository contains one introductory board example. It uses `machine.Pin` and `time.sleep`; it does not configure Wi-Fi or require an external service.
+You need the board, matching firmware, a USB data cable and a tool that can access its filesystem and REPL. The repository provides the program, not firmware or a desktop installer.
 
-<a id="what-is-included"></a>
+```python
+from machine import Pin
+from time import sleep
 
-## ✨ Features
+led = Pin("LED", Pin.OUT)
 
-- Selects the onboard LED with the board alias `Pin("LED", Pin.OUT)`.
-- Toggles the LED state every second, for an approximately two-second on/off cycle.
-- Keeps the complete program in [main.py](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py).
+while True:
+    led.toggle()
+    sleep(1)
+```
 
-<a id="guide-quick-start"></a>
+One state change per second gives an approximately two-second on/off cycle. Run the script interactively while experimenting. Saving it as `main.py` on the board makes it a startup program; interrupt the loop through the connected tool before editing. It has no command-line options or shutdown handler.
 
-## 🚀 Quick start
+## Development and verification
 
-Connect a Raspberry Pi Pico 2 W running matching MicroPython firmware, open it with a compatible MicroPython editor or REPL, then transfer and run [the example](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py). Follow the [step-by-step guide](PiPico2W/FirstLed/readme.md) for the program and expected behavior.
+The source and its guide live in `PiPico2W/FirstLed/`. Its `.micropico` marker identifies a project folder; it does not install firmware, select a serial port or transfer the program. The remaining website files support the [documentation site](https://gcfernando.github.io/raspberry-pi-pico-micropython/).
 
-<a id="run-requirements"></a>
+There is no application build or automated hardware test suite. Verify on the board that the LED toggles and that you can stop execution. Documentation/source inspection does not establish a successful physical-board run. The Repository standards workflow checks metadata only.
 
-<a id="guide-prerequisites-and-installation"></a>
+## Troubleshooting
 
-## 📦 Prerequisites and installation
+| Symptom | Check |
+| --- | --- |
+| `No module named machine` | Run on the MicroPython board rather than desktop Python. |
+| Named LED pin unavailable | Confirm the board model and firmware expose the `LED` alias. |
+| Script runs again after restart | Check whether the board has a startup file named `main.py`; interrupt it through the REPL. |
 
-You need the board, a USB data cable, matching MicroPython firmware and a tool that can access the board's filesystem and REPL. The `machine` module runs on MicroPython; ordinary desktop Python cannot execute this program as written.
+## Contributing, support and license
 
-See the [official RP2 firmware setup guide](https://docs.micropython.org/en/latest/rp2/tutorial/intro.html). This repository does not supply firmware or a desktop dependency installer.
+Use [repository issues](https://github.com/gcfernando/raspberry-pi-pico-micropython/issues) for reproducible problems. New examples should state the board, firmware, wiring, expected behavior and actual hardware checks. Follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [repository standards](REPOSITORY_STANDARDS.md).
 
-<a id="guide-usage"></a>
+Keep wireless credentials and other secrets out of examples and reports; use the [security policy](SECURITY.md) for sensitive findings. This repository has an [MIT license](LICENSE). The [documentation index](documentation.md) provides further source navigation.
 
-## 💡 Usage
-
-Run the script interactively while experimenting. Saving it as `main.py` on the board makes it a startup program; stop execution from your tool's REPL when you want to regain control. The loop runs continuously and has no command-line options.
-
-## 🏗️ Architecture
-
-`PiPico2W/FirstLed` contains the program, guide and [MicroPico project marker](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/.micropico). The marker only identifies the local project folder; it does not install firmware, select a serial port or transfer the script. `main.py` must be run on, or copied to, the board separately. `_config.yml`, `_layouts` and `assets` support the documentation site.
-
-## 🧪 Development and testing
-
-There are no application tests or build scripts; the Repository standards workflow checks metadata separately. Confirm on the board that the LED changes state approximately once per second and that you can interrupt the loop. This documentation review compared the guide's code block with `main.py`; no physical board was available for execution.
-
-<a id="guide-troubleshooting-and-limitations"></a>
-
-## 🛠️ Troubleshooting and limitations
-
-- **`No module named machine`:** run on the MicroPython board rather than desktop Python.
-- **LED alias unavailable:** verify the board model and firmware; this sample expects the named `LED` pin.
-- **Repeated startup:** a board copy named `main.py` is intentionally persistent; interrupt it through the connected tool before editing.
-
-## 🤝 Contributing
-
-For another board example, state the exact board, firmware, wiring and expected behavior. Include hardware verification details and keep the README linked to the executable source.
-
-## 🔒 Security
-
-Do not include wireless credentials or other secrets in examples or reports. Use the [security policy](SECURITY.md) for private reporting of sensitive issues.
-
+<!-- Preserve links to earlier README sections. -->
+<a id="-architecture"></a>
+<a id="-contributing"></a>
+<a id="-development-and-testing"></a>
+<a id="-features"></a>
+<a id="-overview"></a>
+<a id="-prerequisites-and-installation"></a>
+<a id="-quick-start"></a>
+<a id="-security"></a>
+<a id="-support-and-license"></a>
+<a id="-troubleshooting-and-limitations"></a>
+<a id="-usage"></a>
 <a id="documentation-links"></a>
-
-## 📄 Support and license
-
-Report reproducible example issues in [repository issues](https://github.com/gcfernando/raspberry-pi-pico-micropython/issues). The repository includes an [MIT license](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/LICENSE).
-
-[Documentation index](documentation.md)
-
-## Repository maintenance
-
-[Contributing](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/CONTRIBUTING.md) · [Security policy](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/SECURITY.md) · [Repository standards](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/REPOSITORY_STANDARDS.md)
+<a id="guide-prerequisites-and-installation"></a>
+<a id="guide-quick-start"></a>
+<a id="guide-troubleshooting-and-limitations"></a>
+<a id="guide-usage"></a>
+<a id="micropython-led-blink-example-for-raspberry-pi-pico-2-w"></a>
+<a id="raspberry-pi-pico-2-w--micropython-led-blink"></a>
+<a id="raspberry-pi-pico-2-w--micropython-led-example"></a>
+<a id="repository-maintenance"></a>
+<a id="run-requirements"></a>
+<a id="what-is-included"></a>

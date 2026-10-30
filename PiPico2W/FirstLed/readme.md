@@ -4,13 +4,11 @@
 
 # Blink the Pico 2 W LED with MicroPython
 
-Configure the board's named LED pin as an output and toggle it once per second. This example introduces GPIO output and blocking delays with a continuous loop.
-
-> **In this guide:** [Get started](#guide-prerequisites-and-installation) · [Walk through the example](#guide-program) · [Check the limits](#guide-verification)
+Run a continuous LED blink program on a Raspberry Pi Pico 2 W, then use its short source to understand GPIO output and blocking delays. The onboard LED changes state once per second.
 
 <a id="guide-prerequisites-and-installation"></a>
 
-## 📦 Prerequisites and installation
+## Prerequisites and installation
 
 Use a Raspberry Pi Pico 2 W with matching MicroPython firmware, a USB data cable and a MicroPython editor or REPL tool. The `machine` module belongs to the board runtime; ordinary desktop Python cannot run this script as written.
 
@@ -20,7 +18,7 @@ For firmware setup, follow the [official RP2 getting-started guide](https://docs
 
 <a id="guide-program"></a>
 
-## 💡 Program
+## Program
 
 The following matches [main.py](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py):
 
@@ -37,7 +35,7 @@ while True:
 
 <a id="how-it-works"></a>
 
-## 💡 How it works
+## How it works
 
 1. `Pin("LED", Pin.OUT)` selects the board's named onboard LED and configures it as an output. The program does not explicitly set an initial high/low value before the first toggle.
 2. `led.toggle()` changes the current LED state.
@@ -48,7 +46,7 @@ The LED changes state once per second; a complete on/off cycle takes about two s
 
 <a id="run-it-on-the-board"></a>
 
-## 🚀 Run it on the board
+## Run it on the board
 
 Install the matching MicroPython firmware for your Pico 2 W, connect through a compatible editor or MicroPython REPL, and run the [source program](https://github.com/gcfernando/raspberry-pi-pico-micropython/blob/main/PiPico2W/FirstLed/main.py). Saving it as `main.py` on the board lets MicroPython run it at startup.
 
@@ -56,11 +54,11 @@ Interrupt execution from the REPL before editing or replacing a continuously run
 
 <a id="guide-verification"></a>
 
-## 🧪 Verification
+## Verification
 
 Expected board behavior is one LED state change per second. Verify both visible toggling and the ability to stop execution. The code block was compared with the source during documentation review; physical hardware execution was not performed.
 
-## 🛠️ Troubleshooting and limitations
+## Troubleshooting and limitations
 
 | Symptom | Check |
 |---|---|
@@ -76,6 +74,15 @@ See the [official RP2 quick reference](https://docs.micropython.org/en/latest/rp
 
 <a id="documentation-links"></a>
 
-## 🔗 Related documentation
+## Related documentation
 
 [Repository overview and license](../../README.md) · [Documentation index](../../documentation.md)
+
+<!-- Preserve links to earlier README sections. -->
+<a id="-how-it-works"></a>
+<a id="-prerequisites-and-installation"></a>
+<a id="-program"></a>
+<a id="-related-documentation"></a>
+<a id="-run-it-on-the-board"></a>
+<a id="-troubleshooting-and-limitations"></a>
+<a id="-verification"></a>
